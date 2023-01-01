@@ -22,6 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'ingredients'], function () {
     Route::post('/',  [IngredientController::class,"addIngredient"]);
+    Route::get('/',  [IngredientController::class,"getIngredients"]);
 });
 
 Route::group(['prefix' => 'meals'], function () {

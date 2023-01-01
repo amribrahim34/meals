@@ -14,4 +14,10 @@ class IngredientController extends Controller
         $ingredient = Ingredient::create($v);
         return response(['data'=>$ingredient],201);
    }
+
+   public function getIngredients()
+   {
+        $ingredients = Ingredient::get();
+        return response(['data' =>$ingredients]);
+   }
 }
